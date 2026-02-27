@@ -11,18 +11,20 @@ export default function Footer() {
           {/* Dernek Bilgileri */}
           <div className="footer-section">
             <div className="footer-logo">
-              <Image 
-                src="/gamayder.jpeg" 
-                alt="GAMAYDER Logo" 
-                width={80} 
+              <Image
+                src="/logo.jpeg"
+                alt="GAMAYDER Logo"
+                width={80}
                 height={80}
                 style={{ borderRadius: '8px' }}
               />
             </div>
             <h3>GAMAYDER</h3>
+            <p className="footer-dernek-adi">
+              Gaziantep Malatyalılar Yardımlaşma ve Dayanışma Derneği
+            </p>
             <p>
-              Gaziantep Malatya Derneği olarak hemşehrilerimizi bir araya getiriyor, 
-              kültürel ve sosyal faaliyetler düzenliyoruz.
+              Hemşehrilerimizi bir araya getirerek kültürel ve sosyal faaliyetler düzenliyoruz.
             </p>
           </div>
 
@@ -30,6 +32,7 @@ export default function Footer() {
           <div className="footer-section">
             <h3>Hızlı Linkler</h3>
             <ul className="footer-links">
+              <li><Link href="/">Ana Sayfa</Link></li>
               <li><Link href="/hakkimizda">Hakkımızda</Link></li>
               <li><Link href="/faaliyetler">Faaliyetler</Link></li>
               <li><Link href="/haberler">Haberler</Link></li>
@@ -39,7 +42,7 @@ export default function Footer() {
 
           {/* İletişim */}
           <div className="footer-section">
-            <h3>İletişim</h3>
+            <h3>İletişim Bilgileri</h3>
             <ul className="footer-contact">
               <li>
                 <MapPin />
@@ -47,7 +50,7 @@ export default function Footer() {
               </li>
               <li>
                 <Phone />
-                <span>+90 (XXX) XXX XX XX</span>
+                <span>+90 (530) 898 44 24</span>
               </li>
               <li>
                 <Mail />
@@ -58,24 +61,41 @@ export default function Footer() {
 
           {/* Sosyal Medya */}
           <div className="footer-section">
-            <h3>Bizi Takip Edin</h3>
+            <h3>Sosyal Medya</h3>
             <div className="footer-social">
-              <a href="#" aria-label="Facebook">
+              <a href="#" aria-label="Facebook" title="Facebook">
                 <Facebook />
               </a>
-              <a href="#" aria-label="Twitter">
+              <a href="#" aria-label="Twitter" title="Twitter">
                 <Twitter />
               </a>
-              <a href="#" aria-label="Instagram">
+              <a href="#" aria-label="Instagram" title="Instagram">
                 <Instagram />
               </a>
             </div>
           </div>
         </div>
 
+        {/* Yasal Linkler */}
+        <div className="footer-legal">
+          <ul className="footer-legal-links">
+            <li>
+              <a href="/documents/tuzuk.pdf" target="_blank" rel="noopener noreferrer">
+                Dernek Tüzüğü
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
         {/* Alt Kısım */}
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} GAMAYDER - Tüm hakları saklıdır.</p>
+          <p>
+            &copy; {new Date().getFullYear()} GAMAYDER - Gaziantep Malatyalılar Yardımlaşma ve Dayanışma Derneği
+          </p>
+          <p className="footer-credit">
+            Tüm hakları saklıdır.
+          </p>
         </div>
       </div>
     </footer>

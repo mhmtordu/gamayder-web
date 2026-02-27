@@ -22,16 +22,16 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <Link href="/" className="navbar-logo">
-          <Image 
-            src="/gamayder.jpeg" 
-            alt="GAMAYDER Logo" 
-            width={60} 
+          <Image
+            src="/gamayder.jpeg"
+            alt="GAMAYDER Logo"
+            width={60}
             height={60}
             className="navbar-logo-image"
           />
           <div className="navbar-logo-text">
             <h1>GAMAYDER</h1>
-            <p>Gaziantep Malatya Derneği</p>
+            <p>Gaziantep Malatyalılar Yardımlaşma ve Dayanışma Derneği</p>
           </div>
         </Link>
 

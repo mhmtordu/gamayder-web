@@ -1,0 +1,130 @@
+.home-slider {
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .home-slider {
+        height: 400px;
+    }
+}
+
+.slider-container {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.6));
+    z-index: 1;
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: var(--white);
+    text-align: center;
+}
+
+.slide-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .slide-title {
+        font-size: 2rem;
+    }
+}
+
+.slide-description {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .slide-description {
+        font-size: 1.125rem;
+    }
+}
+
+.slide-button {
+    display: inline-block;
+    background-color: var(--primary-500);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.slide-button:hover {
+    background-color: var(--primary-600);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Swiper Navigation Buttons */
+.home-slider .swiper-button-prev,
+.home-slider .swiper-button-next {
+    color: var(--white);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.home-slider .swiper-button-prev:after,
+.home-slider .swiper-button-next:after {
+    font-size: 1.5rem;
+}
+
+.home-slider .swiper-button-prev:hover,
+.home-slider .swiper-button-next:hover {
+    background-color: var(--primary-500);
+}
+
+/* Swiper Pagination */
+.home-slider .swiper-pagination-bullet {
+    background-color: var(--white);
+    opacity: 0.7;
+    width: 12px;
+    height: 12px;
+}
+
+.home-slider .swiper-pagination-bullet-active {
+    background-color: var(--primary-500);
+    opacity: 1;
+}

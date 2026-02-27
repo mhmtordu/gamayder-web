@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "GAMAYDER - Gaziantep Malatya Derneği",
+  title: "GAMAYDER - Gaziantep Malatyalılar Yardımlaşma ve Dayanışma Derneği",
   description: "Gaziantep Malatya Derneği resmi web sitesi. Hemşehrilerimizi bir araya getiriyor, kültürel ve sosyal faaliyetler düzenliyoruz.",
 };
 

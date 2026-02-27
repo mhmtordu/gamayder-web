@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Calendar, Users, Heart, Trophy, ArrowRight, Newspaper } from 'lucide-react';
+import HomeSlider from './components/HomeSlider';
 import './page.css';
 
 export default function Home() {
@@ -50,56 +51,27 @@ export default function Home() {
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="hero">
-        <div className="container-custom">
-          <div className="hero-content">
-            <h1>
-              Hoş Geldiniz!
-              <br />
-              <span className="hero-subtitle">Gaziantep Malatya Derneği</span>
-            </h1>
-            <p>
-              Malatya kökenli hemşehrilerimizi Gaziantep'te bir araya getiriyoruz.
-              Kültürümüzü yaşatıyor, dayanışmamızı güçlendiriyoruz.
-            </p>
-            <div className="hero-buttons">
-              <Link href="/uyelik" className="btn-primary">
-                Üye Ol
-              </Link>
-              <Link href="/hakkimizda" className="btn-outline">
-                Hakkımızda
-              </Link>
-            </div>
-          </div>
-        </div>
-        
-        {/* Decorative wave */}
-        <div className="hero-wave">
-          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0L60 10C120 20 240 40 360 46.7C480 53 600 47 720 43.3C840 40 960 40 1080 46.7C1200 53 1320 67 1380 73.3L1440 80V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V0Z" fill="rgb(249 250 251)"/>
-          </svg>
-        </div>
-      </section>
+      {/* Slider */}
+      <HomeSlider />
 
       {/* Stats Section */}
       <section className="stats">
         <div className="container-custom">
           <div className="stats-grid">
             <div className="stat-item">
-              <div className="stat-number">500+</div>
+              <div className="stat-number">250+</div>
               <div className="stat-label">Üye</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">50+</div>
+              <div className="stat-number">10+</div>
               <div className="stat-label">Etkinlik</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">10</div>
+              <div className="stat-number">22</div>
               <div className="stat-label">Yıllık Tecrübe</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">1000+</div>
+              <div className="stat-number">500+</div>
               <div className="stat-label">Katılımcı</div>
             </div>
           </div>

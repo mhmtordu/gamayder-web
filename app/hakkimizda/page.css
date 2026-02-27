@@ -1,0 +1,356 @@
+.hakkimizda-page {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hakkimizda-hero {
+  background: linear-gradient(135deg, var(--primary-600), var(--secondary-600));
+  color: var(--white);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hakkimizda-hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  opacity: 0.95;
+}
+
+/* Sections */
+.section-white {
+  padding: 5rem 0;
+  background-color: var(--white);
+}
+
+.section-gray {
+  padding: 5rem 0;
+  background-color: var(--gray-50);
+}
+
+/* Content Grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--primary-100);
+  color: var(--primary-700);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.badge-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.text-large {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--gray-700);
+}
+
+.content-text p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  color: var(--gray-600);
+}
+
+.content-text strong {
+  color: var(--primary-600);
+  font-weight: 600;
+}
+
+/* Stats Boxes */
+.content-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.stat-box {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.stat-box .stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-600);
+  margin-bottom: 0.5rem;
+}
+
+.stat-box .stat-label {
+  color: var(--gray-600);
+  font-size: 0.875rem;
+}
+
+/* Mission & Vision */
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .mission-vision-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.mv-card {
+  background-color: var(--white);
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+}
+
+.mv-card:hover {
+  transform: translateY(-8px);
+}
+
+.mv-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.mv-icon.primary {
+  background-color: var(--primary-500);
+}
+
+.mv-icon.secondary {
+  background-color: var(--secondary-500);
+}
+
+.mv-icon svg {
+  width: 32px;
+  height: 32px;
+  color: var(--white);
+}
+
+.mv-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--gray-900);
+}
+
+.mv-card p {
+  line-height: 1.8;
+  color: var(--gray-600);
+}
+
+/* Değerler */
+.degerler-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .degerler-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .degerler-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.deger-card {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.deger-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.deger-icon {
+  width: 56px;
+  height: 56px;
+  background-color: var(--primary-100);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.deger-icon svg {
+  width: 28px;
+  height: 28px;
+  color: var(--primary-600);
+}
+
+.deger-card h4 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--gray-900);
+}
+
+.deger-card p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--gray-600);
+}
+
+/* Yönetim Kurulu */
+.yonetim-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .yonetim-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .yonetim-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.yonetim-grid-small {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .yonetim-grid-small {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.yonetim-card {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.yonetim-card:hover {
+  transform: translateY(-5px);
+}
+
+.yonetim-avatar {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.yonetim-avatar svg {
+  width: 40px;
+  height: 40px;
+  color: var(--white);
+}
+
+.yonetim-card h4 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: var(--gray-900);
+  margin-bottom: 0.25rem;
+}
+
+.yonetim-card .gorev {
+  font-size: 0.875rem;
+  color: var(--primary-600);
+  font-weight: 500;
+}
+
+.mt-16 {
+  margin-top: 4rem;
+}
+
+/* CTA Section */
+.section-cta {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--primary-600), var(--secondary-600));
+  color: var(--white);
+}
+
+.cta-icon {
+  margin: 0 auto 1rem;
+  opacity: 0.9;
+}
+
+.section-cta h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.section-cta p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-cta .btn-primary {
+  background-color: var(--white);
+  color: var(--primary-600);
+}
+
+.section-cta .btn-primary:hover {
+  background-color: var(--gray-100);
+}
