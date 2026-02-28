@@ -10,11 +10,11 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { name: "Ana Sayfa", href: "/", icon: Home },
-    { name: "Hakkımızda", href: "/hakkimizda", icon: Info },
-    { name: "Haberler", href: "/haberler", icon: Newspaper },
-    { name: "Üyelik", href: "/uyelik", icon: Users },
-    { name: "İletişim", href: "/iletisim", icon: Mail },
+    { name: "Ana Sayfa", href: "/",  },
+    { name: "Hakkımızda", href: "/hakkimizda",  },
+    { name: "Haberler", href: "/haberler",  },
+    { name: "Üyelik", href: "/uyelik", },
+    { name: "İletişim", href: "/iletisim",  },
   ];
 
   return (
