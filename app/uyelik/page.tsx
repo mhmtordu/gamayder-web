@@ -114,7 +114,7 @@ export default function Uyelik() {
               </div>
               <div className="info-card">
                 <h4>📞 Bilgi Alın</h4>
-                <p><strong>+90 (XXX) XXX XX XX</strong> numaralı telefondan bize ulaşabilirsiniz</p>
+                <p><strong>+90 (530) 898 44 27</strong> numaralı telefondan bize ulaşabilirsiniz</p>
               </div>
             </div>
           </div>
