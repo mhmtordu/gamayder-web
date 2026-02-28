@@ -52,7 +52,8 @@
 }
 
 .footer-logo img {
-  border-radius: 8px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 /* Hızlı Linkler */
@@ -102,6 +103,20 @@
 
 .footer-contact span {
   line-height: 1.4;
+  color: #d1d5db;
+}
+
+/* Telefon ve Email Linkleri - MAVİ RENK SORUNU DÜZELTİLDİ */
+.footer-phone-link,
+.footer-email-link {
+  color: #d1d5db !important;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-phone-link:hover,
+.footer-email-link:hover {
+  color: var(--primary-500) !important;
 }
 
 /* Sosyal Medya */

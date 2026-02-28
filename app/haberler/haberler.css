@@ -1,0 +1,206 @@
+.haberler-page {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.haberler-hero {
+  background: linear-gradient(135deg, var(--primary-500) 0%, var(--secondary-500) 100%);
+  color: var(--white);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.haberler-hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.haberler-hero p {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Haberler Content */
+.haberler-content {
+  padding: 80px 20px;
+  background: var(--gray-50);
+}
+
+.haberler-bos {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--gray-600);
+  font-size: 1.125rem;
+}
+
+/* Haberler Grid → Liste Yapısı (Satır Tarzı) */
+.haberler-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Haber Card → Yatay Kart (Satır) */
+.haber-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  display: grid;
+  grid-template-columns: 500px 1fr; /* Görsel 500px genişliğinde */
+  min-height: 280px; /* Yeterli yükseklik */
+}
+
+.haber-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* Görsel Alanı - TAŞMAZ, CONTAIN KULLAN */
+.haber-gorsel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.haber-gorsel img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important; /* TAMAMINI GÖSTER, KIRPMA */
+  object-position: center !important;
+  transition: transform 0.3s ease;
+}
+
+.haber-card:hover .haber-gorsel img {
+  transform: scale(1.02);
+}
+
+/* İçerik Alanı */
+.haber-icerik {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.haber-tarih {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gray-500);
+  font-size: 0.875rem;
+  margin-bottom: 12px;
+}
+
+.haber-baslik {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.haber-aciklama {
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.haber-detaylar {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.haber-detay-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--gray-700);
+  font-size: 0.875rem;
+}
+
+.haber-detay-item svg {
+  color: var(--primary-500);
+  flex-shrink: 0;
+}
+
+.haber-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--primary-500) 0%, var(--secondary-500) 100%);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.haber-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+
+/* Responsive - Mobilde Kart Yapısı */
+@media (max-width: 992px) {
+  .haber-card {
+    grid-template-columns: 400px 1fr;
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .haberler-hero h1 {
+    font-size: 2rem;
+  }
+
+  .haberler-hero p {
+    font-size: 1.125rem;
+  }
+
+  .haberler-content {
+    padding: 60px 20px;
+  }
+
+  .haber-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .haber-gorsel {
+    height: 250px;
+  }
+
+  .haber-icerik {
+    padding: 20px;
+  }
+
+  .haber-baslik {
+    font-size: 1.25rem;
+  }
+
+  .haber-detaylar {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

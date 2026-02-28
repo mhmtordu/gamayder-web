@@ -1,7 +1,14 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
-import './Footer.css';
+import Link from "next/link";
+import Image from "next/image";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
+import "./Footer.css";
 
 export default function Footer() {
   return (
@@ -12,11 +19,11 @@ export default function Footer() {
           <div className="footer-section">
             <div className="footer-logo">
               <Image
-                src="/logo.jpeg"
+                src="/images/logo.png"
                 alt="GAMAYDER Logo"
-                width={80}
-                height={80}
-                style={{ borderRadius: '8px' }}
+                width={60}
+                height={60}
+                style={{ borderRadius: "50%", objectFit: "cover" }}
               />
             </div>
             <h3>GAMAYDER</h3>
@@ -24,7 +31,8 @@ export default function Footer() {
               Gaziantep Malatyalılar Yardımlaşma ve Dayanışma Derneği
             </p>
             <p>
-              Hemşehrilerimizi bir araya getirerek kültürel ve sosyal faaliyetler düzenliyoruz.
+              Hemşehrilerimizi bir araya getirerek kültürel ve sosyal
+              faaliyetler düzenliyoruz.
             </p>
           </div>
 
@@ -32,11 +40,21 @@ export default function Footer() {
           <div className="footer-section">
             <h3>Hızlı Linkler</h3>
             <ul className="footer-links">
-              <li><Link href="/">Ana Sayfa</Link></li>
-              <li><Link href="/hakkimizda">Hakkımızda</Link></li>
-              <li><Link href="/faaliyetler">Faaliyetler</Link></li>
-              <li><Link href="/haberler">Haberler</Link></li>
-              <li><Link href="/uyelik">Üye Ol</Link></li>
+              <li>
+                <Link href="/">Ana Sayfa</Link>
+              </li>
+              <li>
+                <Link href="/hakkimizda">Hakkımızda</Link>
+              </li>
+              <li>
+                <Link href="/haberler">Haberler</Link>
+              </li>
+              <li>
+                <Link href="/uyelik">Üye Ol</Link>
+              </li>
+              <li>
+                <Link href="/iletisim">İletişim</Link>
+              </li>
             </ul>
           </div>
 
@@ -46,15 +64,28 @@ export default function Footer() {
             <ul className="footer-contact">
               <li>
                 <MapPin />
-                <span>Gaziantep, Türkiye</span>
+                <span>
+                  Değirmiçem Mahallesi
+                  <br />
+                  Hayri Sacır Cad. No: 1/A
+                  <br />
+                  Şehitkamil/Gaziantep
+                </span>
               </li>
               <li>
                 <Phone />
-                <span>+90 (530) 898 44 24</span>
+                <a href="tel:+905308984427" className="footer-phone-link">
+                  0530 898 44 27
+                </a>
               </li>
               <li>
                 <Mail />
-                <span>info@gamayder.org</span>
+                <a
+                  href="mailto:info@gamayder.org"
+                  className="footer-email-link"
+                >
+                  info@gamayder.org
+                </a>
               </li>
             </ul>
           </div>
@@ -80,22 +111,24 @@ export default function Footer() {
         <div className="footer-legal">
           <ul className="footer-legal-links">
             <li>
-              <a href="/documents/tuzuk.pdf" target="_blank" rel="noopener noreferrer">
+              <a
+                href="/documents/tuzuk.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Dernek Tüzüğü
               </a>
             </li>
-
           </ul>
         </div>
 
         {/* Alt Kısım */}
         <div className="footer-bottom">
           <p>
-            &copy; {new Date().getFullYear()} GAMAYDER - Gaziantep Malatyalılar Yardımlaşma ve Dayanışma Derneği
+            &copy; {new Date().getFullYear()} GAMAYDER - Gaziantep Malatyalılar
+            Yardımlaşma ve Dayanışma Derneği
           </p>
-          <p className="footer-credit">
-            Tüm hakları saklıdır.
-          </p>
+          <p className="footer-credit">Tüm hakları saklıdır.</p>
         </div>
       </div>
     </footer>

@@ -1,21 +1,20 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { Menu, X, Home, Info, Calendar, Newspaper, Mail, Users } from 'lucide-react';
-import './Navbar.css';
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X, Home, Info, Newspaper, Mail, Users } from "lucide-react";
+import "./Navbar.css";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { name: 'Ana Sayfa', href: '/', icon: Home },
-    { name: 'Hakkımızda', href: '/hakkimizda', icon: Info },
-    { name: 'Faaliyetler', href: '/faaliyetler', icon: Calendar },
-    { name: 'Haberler', href: '/haberler', icon: Newspaper },
-    { name: 'Üyelik', href: '/uyelik', icon: Users },
-    { name: 'İletişim', href: '/iletisim', icon: Mail },
+    { name: "Ana Sayfa", href: "/", icon: Home },
+    { name: "Hakkımızda", href: "/hakkimizda", icon: Info },
+    { name: "Haberler", href: "/haberler", icon: Newspaper },
+    { name: "Üyelik", href: "/uyelik", icon: Users },
+    { name: "İletişim", href: "/iletisim", icon: Mail },
   ];
 
   return (
@@ -23,11 +22,12 @@ export default function Navbar() {
       <div className="navbar-container">
         <Link href="/" className="navbar-logo">
           <Image
-            src="/gamayder.jpeg"
+            src="/images/logo.png"
             alt="GAMAYDER Logo"
             width={60}
             height={60}
             className="navbar-logo-image"
+            style={{ borderRadius: "50%", objectFit: "cover" }}
           />
           <div className="navbar-logo-text">
             <h1>GAMAYDER</h1>
@@ -44,7 +44,10 @@ export default function Navbar() {
           ))}
         </div>
 
-        <button onClick={() => setIsOpen(!isOpen)} className="navbar-mobile-btn">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="navbar-mobile-btn"
+        >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>

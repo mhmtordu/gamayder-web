@@ -3,7 +3,55 @@ import { Calendar, Users, Heart, Trophy, ArrowRight, Newspaper } from 'lucide-re
 import HomeSlider from './components/HomeSlider';
 import './page.css';
 
+// Haber tipi tanımla
+interface HaberDetay {
+  saat?: string;
+  yer?: string;
+  adres?: string;
+}
+
+interface Haber {
+  id: number;
+  baslik: string;
+  aciklama: string;
+  gorsel: string;
+  tarih: string;
+  detay?: HaberDetay;
+  link: string;
+}
+
 export default function Home() {
+  // GERÇEK HABERLER - HomeSlider ve Haberler sayfası ile aynı veri
+  const haberlerData: Haber[] = [
+    {
+      id: 1,
+      baslik: "İki Şehir Tek Sofra - Hemşehri İftarı 2026",
+      aciklama: "05 Mart 2026, İftar Vakti - Tarihi Hacıbaba Et Lokantası'nda hemşehrilerimizle buluşuyoruz",
+      gorsel: "/images/slider.png",
+      tarih: "2026-03-05",
+      detay: {
+        saat: "İftar Vakti",
+        yer: "Tarihi Hacıbaba Et Lokantası",
+        adres: "Tarihi Kırkayak Gaziantep Evi - Gaziantep Şubesi"
+      },
+      link: "/haberler"
+    }
+  ];
+
+  // Son 3 haberi al ve formatlayalım
+  const news = haberlerData
+    .sort((a, b) => new Date(b.tarih).getTime() - new Date(a.tarih).getTime())
+    .slice(0, 3)
+    .map(haber => ({
+      title: haber.baslik,
+      date: new Date(haber.tarih).toLocaleDateString('tr-TR', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      }),
+      description: haber.aciklama,
+    }));
+
   const activities = [
     {
       icon: Calendar,
@@ -28,24 +76,6 @@ export default function Home() {
       title: 'Spor Faaliyetleri',
       description: 'Turnuva ve spor organizasyonları',
       color: 'primary',
-    },
-  ];
-
-  const news = [
-    {
-      title: 'Hemşehri İftarı Düzenlendi',
-      date: '15 Kasım 2025',
-      description: 'Derneğimiz geleneksel hemşehri iftarını bu yıl da gerçekleştirdi.',
-    },
-    {
-      title: 'Kapadokya Gezisi',
-      date: '10 Kasım 2025',
-      description: 'Üyelerimiz ile birlikte muhteşem bir Kapadokya gezisi düzenledik.',
-    },
-    {
-      title: 'Yeni Üyelerimiz',
-      date: '5 Kasım 2025',
-      description: 'Derneğimize katılan yeni üyelerimizi sevgiyle karşılıyoruz.',
     },
   ];
 

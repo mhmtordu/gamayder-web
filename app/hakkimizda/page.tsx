@@ -67,7 +67,7 @@ export default function Hakkimizda() {
               <h2 className="section-title">Köklü Bir Geçmiş</h2>
               <p className="text-large">
                 GAMAYDER (Gaziantep Malatyalılar Yardımlaşma ve Dayanışma Derneği), <strong>2003 yılında</strong> dönemin 
-                Gaziantep İl Emniyet Müdürü <strong>Ali Kalkan</strong>'ın öncülüğünde ve 
+                Gaziantep İl Emniyet Müdürü hemşehrimiz <strong>Ali Kalkan</strong>'ın öncülüğünde ve 
                 değerli hemşehrilerimizin girişimleriyle kurulmuştur.
               </p>
               <p>

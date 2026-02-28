@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "baslik": "İki Şehir Tek Sofra - Hemşehri İftarı 2026",
+    "aciklama": "05 Mart 2026, İftar Vakti - Tarihi Hacıbaba Et Lokantası'nda hemşehrilerimizle buluşuyoruz",
+    "gorsel": "/slider/iftar.png",
+    "tarih": "2026-03-05",
+    "detay": {
+      "saat": "İftar Vakti",
+      "yer": "Tarihi Hacıbaba Et Lokantası",
+      "adres": "Tarihi Kırkayak Gaziantep Evi - Gaziantep Şubesi"
+    },
+    "link": "/haberler"
+  }
+]
