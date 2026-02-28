@@ -129,6 +129,9 @@ export default function Footer() {
             Yardımlaşma ve Dayanışma Derneği
           </p>
           <p className="footer-credit">Tüm hakları saklıdır.</p>
+          <p className="footer-credit" style={{ marginTop: "4px", opacity: 0.7, fontSize: "0.75rem" }}>
+            Bu site derneğimiz üyesi <strong>Mehmet Ordu</strong> tarafından tasarlanmış ve yayına alınmıştır.
+          </p>
         </div>
       </div>
     </footer>
